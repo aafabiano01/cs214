@@ -1,0 +1,111 @@
+Script started on 2020-02-11 13:07:13-0500
+]0;aaf25@maroon16: ~/cs214/projects/01/clojure[01;32maaf25@maroon16[00m:[01;34m~/cs214/projects/01/clojure[00m$ cat src/rect_area.clj
+;;;; rect_area.clj calculates the area of a rectangle.
+;;;;
+;;;; Input: The height and width of a rectangle
+;;;; Output: The area of that rectangle.
+;;;;
+;;;; Usage: clojure -m rect_area
+;;;;
+;;;; Begun by: Prof. Adams, for CS 214 at Calvin College.
+;;;; Completed by: Alex Fabiano
+;;;; Date: 2/10/20
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(ns rect_area) ; namespace function names the program
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Function rectArea() computes the area of a rectangle
+;;; Receive: height and width, both numbers
+;;; Precondition: h and w >= 0.0.
+;;; Return: the area of the corresponding rectangle
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defn rectArea [height, width]
+  (* height width); return h*w
+)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Function -main is where execution begins
+;;; Input: the radius of a circle.
+;;; Output: the area of that circle.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defn -main []
+  (println "\nTo compute the area of a rectangle,")
+  (print   " enter its width: ") (flush)
+  (let
+    [ width (read) ]
+  
+  (print "Enter its height: ") (flush)
+
+  (let
+    [ height (read) ]
+
+    (assert (>= height 0) "-main: height must be positive")
+    (assert (>= width 0) "-main: width must be positive")
+
+    (printf "\nThe area is %f\n\n" (double (rectArea height width)))
+    
+    (print "\nThe area is ")
+    (print (rectArea height width))
+    (print "\n\n")
+
+    (printf "\nThe area is %.15f\n\n" (double (rectArea height width)))
+  )
+  )
+)  
+]0;aaf25@maroon16: ~/cs214/projects/01/clojure[01;32maaf25@maroon16[00m:[01;34m~/cs214/projects/01/clojure[00m$ clojure -m rect_area
+
+To compute the area of a rectangle,
+ enter its width: 4
+Enter its height: 4
+
+The area is 16.000000
+
+
+The area is 16
+
+
+The area is 16.000000000000000
+
+]0;aaf25@maroon16: ~/cs214/projects/01/clojure[01;32maaf25@maroon16[00m:[01;34m~/cs214/projects/01/clojure[00m$ clojure -m rect_area
+
+To compute the area of a rectangle,
+ enter its width: 2.5
+Enter its height: 4.7
+
+The area is 11.750000
+
+
+The area is 11.75
+
+
+The area is 11.750000000000000
+
+]0;aaf25@maroon16: ~/cs214/projects/01/clojure[01;32maaf25@maroon16[00m:[01;34m~/cs214/projects/01/clojure[00m$ clojure -m rect_area
+
+To compute the area of a rectangle,
+ enter its width: 99
+Enter its height: 99
+
+The area is 9801.000000
+
+
+The area is 9801
+
+
+The area is 9801.000000000000000
+
+]0;aaf25@maroon16: ~/cs214/projects/01/clojure[01;32maaf25@maroon16[00m:[01;34m~/cs214/projects/01/clojure[00m$ clojure -m rect_area
+
+To compute the area of a rectangle,
+ enter its width: 0
+Enter its height: 4
+
+The area is 0.000000
+
+
+The area is 0
+
+
+The area is 0.000000000000000
+
+]0;aaf25@maroon16: ~/cs214/projects/01/clojure[01;32maaf25@maroon16[00m:[01;34m~/cs214/projects/01/clojure[00m$ exit
+
+Script done on 2020-02-11 13:08:22-0500

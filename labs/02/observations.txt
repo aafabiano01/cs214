@@ -1,0 +1,22 @@
+Flex 1: It looks as though 695-742 deals with closing files and perhaps saving, while 740-770 deal with opening new ones. 
+Flex 2: hello WORD
+NO WORD
+1 NUMBER
+1h NUMBER WORD
+h1h WORD
+h_h WORD _WORD
+_h _WORD
+Added line [_] printf("UNDERSCORE\n"); Now goes like
+_WORD UNDERSCORE WORD
+Example 3:
+StudentInfo
+IDENTIFIER: StudentInfo
+./example3 < StudentInfo.h returns
+IDENTIFIER: man
+IDENTIFIER: look
+IDENTIFIER: at
+IDENTIFIER: all
+IDENTIFIER: this
+IDENTIFIER: info
+Example 4: Terminals, as the name implies, are the end. Terminals cannot be further broken down into tokens, while nonterminals are like the valid sequence. The recursion does not end with them, they can still be broken down further.
+Heat on and heat off produce same message.
